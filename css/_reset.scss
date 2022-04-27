@@ -24,18 +24,13 @@ picture {
 
 /* set up the body */
 body {
-	font-family: var(--ff-default);
-	font-size: var(--fs-400);
-	font-weight: 300 !important;
-	color: var(--clr-dark);
 	background-color: var(--clr-white);
-	line-height: 1.5;
 	min-height: 100vh;
 }
 
 /* make images easier to work with */
-img:not(hidden),
-picture:not(hidden) {
+img,
+picture {
 	max-width: 100%;
 	display: block;
 }
