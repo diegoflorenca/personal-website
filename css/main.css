@@ -108,7 +108,7 @@ body {
 }
 
 /* ----------------------- */
-/* Fonts Colors            */
+/* Text Colors             */
 /* ----------------------- */
 .text-dark {
   color: var(--clr-dark);
@@ -120,6 +120,13 @@ body {
 
 .text-light {
   color: var(--clr-light);
+}
+
+/* ----------------------- */
+/* text alignment          */
+/* ----------------------- */
+.text-center {
+  text-align: center;
 }
 
 /* ----------------------- */
@@ -140,6 +147,7 @@ body {
 
 .container {
   width: 100%;
+  min-width: 20rem;
 }
 
 .container > *:nth-of-type(1) {
@@ -169,6 +177,10 @@ body {
   background-color: var(--clr-light);
 }
 
+.bg-light-gradient {
+  background: var(--light-gradient);
+}
+
 /* ----------------------- */
 /* Custom properties       */
 /* ----------------------- */
@@ -187,10 +199,16 @@ body {
   /* font-families */
   --ff-accent: 'Oswald', sans-serif;
   --ff-default: 'Roboto', sans-serif;
+  /* Gradients */
+  --light-gradient: linear-gradient(180deg, var(--clr-light) 0%, var(--clr-white) 100%);
+  --dark-gradient: linear-gradient(90deg, var(--clr-dark) 0%, var(--clr-dark) 30%, var(--clr-dark) 70%, var(--clr-dark) 100%);
 }
 
+/* ----------------------- */
+/* Header Section          */
+/* ----------------------- */
 .primary-header {
-  padding: var(--spacing, 2rem);
+  padding: 2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -252,6 +270,7 @@ body {
     background-color: var(--clr-light);
     -webkit-transition: height 250ms ease-in;
     transition: height 250ms ease-in;
+    z-index: 999;
   }
   .primary-header nav[data-visible='true'] {
     height: calc(100vh - 7.5rem);
@@ -269,5 +288,36 @@ body {
   .primary-header .primary-navigation a:hover {
     text-decoration: none;
   }
+}
+
+/* ----------------------- */
+/* Presentation Section    */
+/* ----------------------- */
+.presentation {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4em;
+  --gap: 3rem;
+}
+
+.presentation h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.presentation img {
+  width: 100%;
+  max-width: 20rem;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.presentation .welcome-text {
+  max-width: 25ch;
+  font-size: clamp(1.3rem, 4vw, 2.2rem);
 }
 /*# sourceMappingURL=main.css.map */

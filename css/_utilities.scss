@@ -38,7 +38,7 @@ body {
 }
 
 /* ----------------------- */
-/* Fonts Colors            */
+/* Text Colors             */
 /* ----------------------- */
 .text-dark {
 	color: var(--clr-dark);
@@ -50,6 +50,13 @@ body {
 
 .text-light {
 	color: var(--clr-light);
+}
+
+/* ----------------------- */
+/* text alignment          */
+/* ----------------------- */
+.text-center {
+	text-align: center;
 }
 
 /* ----------------------- */
@@ -71,6 +78,7 @@ body {
 
 .container {
 	width: 100%;
+	min-width: 20rem;
 
 	& > *:nth-of-type(1) {
 		max-width: 75rem;
@@ -95,4 +103,8 @@ body {
 
 .bg-light {
 	background-color: var(--clr-light);
+}
+
+.bg-light-gradient {
+	background: var(--light-gradient);
 }
