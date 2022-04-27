@@ -43,6 +43,16 @@ select {
   font: inherit;
 }
 
+/* Set link default style */
+a {
+  text-decoration: none;
+  color: var(--clr-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* Remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -198,10 +208,57 @@ body {
 }
 
 .primary-header .mobile-nav-toggle {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: none;
-  background-image: url("../images/btn-hamburger.svg");
-  background-repeat: no-repeat;
+  display: none;
+}
+
+.primary-header .primary-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.primary-header .primary-navigation a {
+  color: var(--clr-dark);
+}
+
+@media (max-width: 35rem) {
+  .primary-header .mobile-nav-toggle {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    background-image: url("../images/btn-hamburger.svg");
+    background-repeat: no-repeat;
+  }
+  .primary-header .mobile-nav-toggle[aria-expanded='true'] {
+    background-image: url("../images/btn-close.svg");
+  }
+  .primary-header nav {
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow-y: hidden;
+    background-color: var(--clr-light);
+    -webkit-transition: height 250ms ease-in;
+    transition: height 250ms ease-in;
+  }
+  .primary-header nav[data-visible='true'] {
+    height: calc(100vh - 7.5rem);
+  }
+  .primary-header .primary-navigation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    padding-inline: 4em;
+  }
+  .primary-header .primary-navigation a {
+    padding-block: 1.5rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

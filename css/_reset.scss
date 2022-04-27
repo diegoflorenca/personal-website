@@ -43,6 +43,16 @@ select {
 	font: inherit;
 }
 
+/* Set link default style */
+a {
+	text-decoration: none;
+	color: var(--clr-accent);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 /* Remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
 	*,
