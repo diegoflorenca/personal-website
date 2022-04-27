@@ -1,6 +1,11 @@
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const nav = document.querySelector('nav');
 
+const links = document.querySelectorAll('nav a');
+links.forEach((link) => {
+	link.addEventListener('click', menuToggle);
+});
+
 mobileNavToggle.addEventListener('click', menuToggle);
 
 function menuToggle() {
