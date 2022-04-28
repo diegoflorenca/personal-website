@@ -60,6 +60,13 @@ body {
 }
 
 /* ----------------------- */
+/* icons                   */
+/* ----------------------- */
+.icon {
+	width: 4.5rem;
+}
+
+/* ----------------------- */
 /* Utility classes         */
 /* ----------------------- */
 
@@ -76,11 +83,15 @@ body {
 	border: 0;
 }
 
+.flow > *:where(:not(:first-child)) {
+	margin-top: var(--flow-space, 1rem);
+}
+
 .container {
 	width: 100%;
 	min-width: 20rem;
 
-	& > *:nth-of-type(1) {
+	& > *:where(:first-child) {
 		max-width: 75rem;
 		margin-inline: auto;
 	}

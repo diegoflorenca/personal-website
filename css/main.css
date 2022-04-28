@@ -130,6 +130,13 @@ body {
 }
 
 /* ----------------------- */
+/* icons                   */
+/* ----------------------- */
+.icon {
+  width: 4.5rem;
+}
+
+/* ----------------------- */
 /* Utility classes         */
 /* ----------------------- */
 /* Screen readers only */
@@ -145,12 +152,16 @@ body {
   border: 0;
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 .container {
   width: 100%;
   min-width: 20rem;
 }
 
-.container > *:nth-of-type(1) {
+.container > *:where(:first-child) {
   max-width: 75rem;
   margin-inline: auto;
 }
@@ -319,5 +330,19 @@ body {
 .presentation .welcome-text {
   max-width: 25ch;
   font-size: clamp(1.3rem, 4vw, 2.2rem);
+}
+
+/* ----------------------- */
+/* About me Section        */
+/* ----------------------- */
+.about-me {
+  padding: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
