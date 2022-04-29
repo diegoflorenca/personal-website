@@ -155,16 +155,18 @@
 	}
 }
 
-.about-me {
+.section-content {
 	padding: 4rem;
 	flex-direction: column;
 	align-items: center;
 	--gap: 3rem;
 
-	p {
+	p.section-intro {
 		max-width: 65ch;
 	}
+}
 
+.about-me {
 	.my-skills {
 		padding: 2rem;
 		flex-direction: column;
@@ -205,6 +207,34 @@
 			.skill-column.flex {
 				justify-content: space-around;
 			}
+		}
+	}
+}
+
+.my-work {
+	.project {
+		border-radius: 0.5rem;
+		overflow: hidden;
+		filter: var(--shadow-small);
+
+		.project-description {
+			--flow-space: 1.5rem;
+			padding: 1rem;
+		}
+
+		.buttons {
+			width: 100%;
+			grid-template-columns: repeat(2, 1fr);
+			align-content: space-between;
+			--gap: 1rem;
+		}
+	}
+}
+
+@media (max-width: 60rem) {
+	.my-work {
+		.projects {
+			flex-direction: column;
 		}
 	}
 }

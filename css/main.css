@@ -127,17 +127,45 @@ body {
 }
 
 /* ----------------------- */
-/* text alignment          */
+/* Text alignment          */
 /* ----------------------- */
 .text-center {
   text-align: center;
 }
 
 /* ----------------------- */
-/* icons                   */
+/* Icons                   */
 /* ----------------------- */
 .icon {
   width: 4.5rem;
+}
+
+/* ----------------------- */
+/* Buttons                 */
+/* ----------------------- */
+.btn {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--clr-accent);
+  font-weight: 500;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  text-align: center;
+}
+
+.btn:hover {
+  text-decoration: none;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+}
+
+.btn-outlined {
+  background-color: none;
+}
+
+.btn-regular {
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
 }
 
 /* ----------------------- */
@@ -362,7 +390,7 @@ body {
   z-index: 0;
 }
 
-.about-me {
+.section-content {
   padding: 4rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -374,7 +402,7 @@ body {
   --gap: 3rem;
 }
 
-.about-me p {
+.section-content p.section-intro {
   max-width: 65ch;
 }
 
@@ -432,6 +460,36 @@ body {
   .my-skills-container .skills-description .skill-column.flex {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+
+.my-work .project {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-filter: var(--shadow-small);
+          filter: var(--shadow-small);
+}
+
+.my-work .project .project-description {
+  --flow-space: 1.5rem;
+  padding: 1rem;
+}
+
+.my-work .project .buttons {
+  width: 100%;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  --gap: 1rem;
+}
+
+@media (max-width: 60rem) {
+  .my-work .projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=main.css.map */
