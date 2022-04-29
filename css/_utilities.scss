@@ -13,6 +13,10 @@ body {
 	font-family: var(--ff-accent);
 	font-weight: 400;
 }
+
+.f-strong {
+	font-weight: 500;
+}
 /* ----------------------- */
 /* Fonts sizes             */
 /* ----------------------- */
@@ -114,6 +118,10 @@ body {
 
 .bg-light {
 	background-color: var(--clr-light);
+}
+
+.bg-white {
+	background-color: var(--clr-white);
 }
 
 .bg-light-gradient {
