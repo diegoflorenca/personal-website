@@ -300,6 +300,8 @@ a.special-link:hover {
 /* Header Section          */
 /* ----------------------- */
 .primary-header {
+  width: 100%;
+  position: fixed;
   padding: 2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -307,6 +309,9 @@ a.special-link:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 10;
 }
 
 .primary-header div {
@@ -394,6 +399,7 @@ a.special-link:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 4em;
+  padding-top: calc(4em + 120px);
   --gap: 3rem;
 }
 
