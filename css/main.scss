@@ -33,17 +33,19 @@
 /* ----------------------- */
 /* Header Section          */
 /* ----------------------- */
-.primary-header {
-	width: 100%;
+.fixed-header {
 	position: fixed;
-	padding: 2rem;
-	justify-content: space-between;
-	align-items: center;
 	z-index: 10;
 
 	&.active {
 		filter: var(--shadow-small);
 	}
+}
+.primary-header {
+	width: 100%;
+	padding: 2rem;
+	justify-content: space-between;
+	align-items: center;
 
 	div {
 		align-items: center;
@@ -229,14 +231,18 @@
 }
 
 .my-work {
+	max-width: 75rem;
+	margin-inline: auto;
 	.project {
 		flex: 1;
 		border-radius: 0.5rem;
 		overflow: hidden;
+		align-items: center;
 		filter: var(--shadow-small);
 
 		.project-description {
-			--flow-space: 1.5rem;
+			flex-direction: column;
+			align-items: center;
 			padding: 1rem;
 		}
 
