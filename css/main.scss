@@ -213,6 +213,7 @@
 
 .my-work {
 	.project {
+		flex: 1;
 		border-radius: 0.5rem;
 		overflow: hidden;
 		filter: var(--shadow-small);
@@ -235,6 +236,46 @@
 	.my-work {
 		.projects {
 			flex-direction: column;
+
+			.project {
+				max-width: 30rem;
+			}
+		}
+	}
+}
+
+.contact-form {
+	width: 100%;
+	max-width: 25rem;
+	grid-template-columns: 1fr;
+	--gap: 1.8rem;
+
+	label {
+		--gap: 0.3rem;
+	}
+
+	.btn-submit {
+		width: 80%;
+		margin-inline: auto;
+		padding-block: 0.5rem;
+	}
+}
+
+.social-media {
+	.social-links {
+		justify-content: space-between;
+		padding-bottom: 1rem;
+		a {
+			display: flex;
+			padding: 0.8rem;
+			border-radius: 50%;
+			border: 0.2rem solid var(--clr-light);
+			transition: all 300ms ease-in-out;
+
+			&:hover {
+				background-color: var(--clr-accent);
+				border-color: var(--clr-accent);
+			}
 		}
 	}
 }

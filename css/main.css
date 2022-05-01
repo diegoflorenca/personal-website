@@ -43,6 +43,12 @@ select {
   font: inherit;
 }
 
+/* makes buttons look like an anchors */
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
 /* Set link default style */
 a {
   text-decoration: none;
@@ -166,6 +172,25 @@ body {
 .btn-regular {
   color: var(--clr-light);
   background-color: var(--clr-accent);
+}
+
+.btn-submit {
+  color: var(--light);
+  background-color: var(--clr-accent);
+}
+
+/* Inputs & textareas */
+input,
+textarea {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  color: var(--clr-dark);
+  font-family: var(--ff-default);
+  background-color: var(--clr-light);
+}
+
+textarea {
+  height: 8rem;
 }
 
 /* ----------------------- */
@@ -464,6 +489,9 @@ body {
 }
 
 .my-work .project {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   border-radius: 0.5rem;
   overflow: hidden;
   -webkit-filter: var(--shadow-small);
@@ -491,5 +519,49 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .my-work .projects .project {
+    max-width: 30rem;
+  }
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 25rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  --gap: 1.8rem;
+}
+
+.contact-form label {
+  --gap: 0.3rem;
+}
+
+.contact-form .btn-submit {
+  width: 80%;
+  margin-inline: auto;
+  padding-block: 0.5rem;
+}
+
+.social-media .social-links {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.social-media .social-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.8rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--clr-light);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.social-media .social-links a:hover {
+  background-color: var(--clr-accent);
+  border-color: var(--clr-accent);
 }
 /*# sourceMappingURL=main.css.map */

@@ -97,6 +97,25 @@ body {
 	background-color: var(--clr-accent);
 }
 
+.btn-submit {
+	color: var(--light);
+	background-color: var(--clr-accent);
+}
+
+/* Inputs & textareas */
+input,
+textarea {
+	padding: 0.3rem;
+	border-radius: 0.5rem;
+	color: var(--clr-dark);
+	font-family: var(--ff-default);
+	background-color: var(--clr-light);
+}
+
+textarea {
+	height: 8rem;
+}
+
 /* ----------------------- */
 /* Utility classes         */
 /* ----------------------- */

@@ -43,6 +43,12 @@ select {
 	font: inherit;
 }
 
+/* makes buttons look like an anchors */
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+
 /* Set link default style */
 a {
 	text-decoration: none;
