@@ -39,8 +39,11 @@
 	padding: 2rem;
 	justify-content: space-between;
 	align-items: center;
-	backdrop-filter: blur(5px);
 	z-index: 10;
+
+	&.active {
+		filter: var(--shadow-small);
+	}
 
 	div {
 		align-items: center;
@@ -52,7 +55,16 @@
 		}
 	}
 
-	.avatar {
+	#avatar {
+		opacity: 0;
+		transition: opacity 300ms ease-in-out;
+	}
+
+	#avatar.active {
+		opacity: 1;
+	}
+
+	.avatar-img {
 		height: 3.5rem;
 	}
 

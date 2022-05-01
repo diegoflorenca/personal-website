@@ -147,6 +147,14 @@ a.special-link {
 	border: 0;
 }
 
+/* Anchor accounting for fixed menu */
+.anchor {
+	display: block;
+	position: relative;
+	top: -7.5rem;
+	visibility: hidden;
+}
+
 .flow > *:where(:not(:first-child)) {
 	margin-top: var(--flow-space, 1rem);
 }

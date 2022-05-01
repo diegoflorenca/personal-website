@@ -226,6 +226,14 @@ a.special-link:hover {
   border: 0;
 }
 
+/* Anchor accounting for fixed menu */
+.anchor {
+  display: block;
+  position: relative;
+  top: -7.5rem;
+  visibility: hidden;
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
@@ -309,9 +317,12 @@ a.special-link:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
   z-index: 10;
+}
+
+.primary-header.active {
+  -webkit-filter: var(--shadow-small);
+          filter: var(--shadow-small);
 }
 
 .primary-header div {
@@ -326,7 +337,17 @@ a.special-link:hover {
   margin-top: 0.5em;
 }
 
-.primary-header .avatar {
+.primary-header #avatar {
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.primary-header #avatar.active {
+  opacity: 1;
+}
+
+.primary-header .avatar-img {
   height: 3.5rem;
 }
 
