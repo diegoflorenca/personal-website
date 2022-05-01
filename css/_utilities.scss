@@ -116,6 +116,20 @@ textarea {
 	height: 8rem;
 }
 
+/* Special links */
+a.special-link {
+	display: flex;
+	padding: 0.8rem;
+	border-radius: 50%;
+	border: 0.2rem solid var(--clr-light);
+	transition: all 300ms ease-in-out;
+
+	&:hover {
+		background-color: var(--clr-accent);
+		border-color: var(--clr-accent);
+	}
+}
+
 /* ----------------------- */
 /* Utility classes         */
 /* ----------------------- */
